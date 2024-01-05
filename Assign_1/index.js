@@ -100,10 +100,69 @@ function monIndex(month) {
     return ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", 'Aug', 'Sept', "Oct", "NOv", "Dec"].indexOf(month);
 }
 
+function populateStates() {
+    const indianStates = [
+        "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh",
+        "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand", "Karnataka",
+        "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram",
+        "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana",
+        "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal"
+    ];
+    const selectElement = document.getElementById("state");
+
+    // Clear existing options
+    selectElement.innerHTML = "";
+
+    // Add options dynamically
+    for (let i = 0; i < indianStates.length; i++) {
+        const option = document.createElement("option");
+        option.value = indianStates[i];
+        option.text = indianStates[i];
+        selectElement.appendChild(option);
+    }
+
+
+}
+function stateIndex(stateindex) {
+    return [
+        "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", "Chhattisgarh",
+        "Goa", "Gujarat", "Haryana", "Himachal Pradesh", "Jharkhand", "Karnataka",
+        "Kerala", "Madhya Pradesh", "Maharashtra", "Manipur", "Meghalaya", "Mizoram",
+        "Nagaland", "Odisha", "Punjab", "Rajasthan", "Sikkim", "Tamil Nadu", "Telangana",
+        "Tripura", "Uttar Pradesh", "Uttarakhand", "West Bengal"
+    ].indexOf(stateindex);
+
+}
+
+function populateDistrict() {
+    let west_bengal_districts = ["Alipurduar", "Bankura", "Birbhum", "Cooch Behar",
+        "Dakshin Dinajpur", "Darjeeling", "Hooghly", "Howrah", "Jalpaiguri",
+        "Jhargram", "Kalimpong", "Kolkata", "Malda", "Murshidabad", "Nadia", "North 24 Parganas",
+        "Paschim Bardhaman", "Paschim Medinipur", "Purba Bardhaman", "Purba Medinipur", "Purulia",
+        "South 24 Parganas", "Uttar Dinajpur"];
+        
+    var state = document.getElementById("state").value;
+    console.log(state)
+
+    var selectDist = document.getElementById("dist");
+
+    selectDist.innerHTML = "";
+    if (state == "West Bengal") {
+        for (var i = 0; i < west_bengal_districts.length; i++) {
+            const option = document.createElement("option");
+            option.value = west_bengal_districts[i];
+            option.text = west_bengal_districts[i];
+            selectDist.appendChild(option);
+        }
+    }
+
+}
+
 window.onload = function () {
     populateDate();
     populateMonths();
-    populateDays();
+    populateDays(); populateStates();
+
 };
 
 // Add event listeners to year and month dropdowns to update days when changed

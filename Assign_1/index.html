@@ -25,7 +25,8 @@
             <div><label>Line 1:</label> <input type="text" placeholder="ADDRESS LINE 1" id="line1"></div>
             <div><label>Line 2:</label> <input type="text" placeholder="ADDRESS LINE 2" id="line2"></div>
             <div><label>City :</label> <input type="text" placeholder="City" id="city"></div>
-            <div><label>State :</label> <input type="text" placeholder="State" id="state"></div>
+            <div><label>State :</label> <select name="State" id="state" style="width: 5cm; padding: 5px;" onchange="populateDistrict()"></select></div>
+            <div><label>District :</label><select  name="District" id="dist" style="width: 5cm;" ></select> </div>
             <div><label>Zip :</label> <input type="text" placeholder="Zip" id="zip"></div>
         </fieldset>
         <br />
