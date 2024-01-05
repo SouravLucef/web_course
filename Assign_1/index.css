@@ -1,0 +1,43 @@
+form{
+  background-color:transparent 20%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+div {
+    width: 600px;
+    margin: auto;
+    padding: 10px;
+    margin-bottom: 10px;
+    
+  }
+  select{
+    padding: 4px;
+  }
+  input{
+      padding: 5px;
+      
+      
+  }
+  body{
+      text-align: center;
+      background-image:url(https://cdn.wallpapersafari.com/16/74/56vWLQ.jpg);
+      height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:100% 100%;
+  background-attachment: fixed;
+  }
+ 
+  label {
+    display: inline-block;
+    font-size: larger;
+    font-weight:bolder;
+    width: 150px;
+  }
+
+  fieldset{
+      margin-left: 130px;
+      margin-right: 130px;
+  }
