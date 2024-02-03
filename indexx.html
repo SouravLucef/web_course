@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous">
+    <style>
+        .hiddenDiv {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container-fluid" style="text-align: center; background-image: url('R.jpg'); height: 5cm;">
+            <h1 style="font-style: italic; color: aqua; font-family: 'Brush Script MT', cursive;">MY FINE DINING RESTAURANT</h1>
+        </div>
+    </header>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">WELCOME</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#homePageContent">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#catalogue">CATALOGUE</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            MENU
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#indian">INDIAN</a></li>
+                            <li><a class="dropdown-item" href="#chinese">CHINESE</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#continental">CONTINENTAL</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-disabled="true">Disabled</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container" id="bodyarea" height="800px">
+        <div class="jumbotron bg-dark hiddenDiv" id="homePageContent">
+            <h1>Hi</h1>
+            <p>This is the content of the home page.</p>
+        </div>
+        <div class="jumbotron bg-dark hiddenDiv" id="indian">
+            <h2>Indian Menu</h2>
+            <!-- Add your Indian menu content here -->
+        </div>
+        <div class="jumbotron bg-dark hiddenDiv" id="chinese">
+            <h2>Chinese Menu</h2>
+            <!-- Add your Chinese menu content here -->
+        </div>
+        <div class="jumbotron bg-dark hiddenDiv" id="continental">
+            <h2>Continental Menu</h2>
+            <!-- Add your Continental menu content here -->
+        </div>
+        <div class="jumbotron bg-dark hiddenDiv" id="catalogue">
+            <h2>Catalogue</h2>
+            <!-- Add your catalogue content here -->
+        </div>
+    </div>
+
+    <div class="footer fixed-bottom">
+        <footer style="height: 100%; background-color: blueviolet;padding: 10px;">
+            developed by: Sourav Mondal
+        </footer>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            $('.nav-link').click(function (e) {
+                // Prevent the default anchor click behavior
+                e.preventDefault();
+
+                // Get the target div id from the href attribute
+                var targetDivId = $(this).attr('href');
+
+                // Hide all divs with the class 'hiddenDiv'
+                $('.hiddenDiv').hide();
+
+                // Show the target div
+                $(targetDivId).show();
+            });
+        });
+    </script>
+
+</body>
+</html>
