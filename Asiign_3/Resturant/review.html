@@ -19,7 +19,7 @@
         <input type="name" class="form-control" id="customer_name" placeholder="Name">
       </div>
       <div class="col mb-3">
-        <label for="customer_DOB" class="form-label">Date of Birth</label>
+        <label for="customer_dob" class="form-label">Date of Birth</label>
         <input type="date" class="form-control" id="customer_dob" placeholder="D O B">
 
       </div>
@@ -46,7 +46,7 @@
   <div>
     <h5>Customer Reviews</h5>
     <div id="reviewbox">
-
+      
     </div>
   </div>
 </div>
@@ -57,6 +57,6 @@ let cdob=document.getElementById('customer_dob').value
 let review=document.getElementById('reviewtext').value
 let card='<div class="card" style="width: 18rem;"><div class="card-body"><h5 class="card-title">{cname}</h5><h6 class="card-subtitle mb-2 text-body-secondary">{cdob}</h6><p class="card-text">{review}</p></div></div>'
 console.log(cname)
-document.getElementById('reviewbox').innerHTML=cname
+$("#reviewbox").append('<div class="card" style="width: 18rem;"><div class="card-body"><h5 class="card-title">{cname}</h5><h6 class="card-subtitle mb-2 text-body-secondary">{cdob}</h6><p class="card-text">{review}</p></div></div>')
   }
 </script>
